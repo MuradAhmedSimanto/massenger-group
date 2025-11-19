@@ -14,30 +14,35 @@ body {
     text-align: center;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header (Slim + Sticky + Sharp Corners) ---------- */
 .header {
-    background: linear-gradient(90deg, #d4af37, #f7d774, #d4af37); /* গোল্ডেন গ্রেডিয়েন্ট */
-    padding: 25px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background: #1abc9c;       /* teal / mint color */
+    padding: 6px 0;            /* extra slim header */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+
+    border-radius: 0;          /* চারকোনা — কোনার কোনো গোল অংশ নেই */
+    margin: 0;                 /* ফুল width বার */
+
+    position: sticky;          /* স্ক্রল করলে টপে আটকে থাকবে */
+    top: 0;
+    z-index: 1000;
 }
 
 .header-inner {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    padding: 0 20px;
+    gap: 8px;
+    padding: 0 10px;
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 /* Header texts */
@@ -48,15 +53,15 @@ body {
 }
 
 .title {
-    font-size: 2.3rem;
+    font-size: 1.5rem;       /* slim clean look */
     font-weight: 800;
-    color: #000000;     /* এখন পুরোপুরি BLACK */
-    text-shadow: none;  /* ক্লিয়ার লুক */
+    color: #000000;          /* কালো টাইটেল */
+    text-shadow: none;
 }
 
 .sub {
-    font-size: 1rem;
-    color: #4b3e24;     /* গাঢ় গোল্ডেন–ব্রাউন */
+    font-size: 0.9rem;
+    color: #4b3e24;
     font-weight: 600;
 }
 
@@ -81,7 +86,7 @@ body {
 section {
     width: 90%;
     margin: 40px auto;
-    background: #ffffffd9;  /* কাচের মতো হালকা সাদা */
+    background: #ffffffd9;   /* কাচের মতো হালকা সাদা */
     padding: 35px;
     border-radius: 18px;
     border: 1px solid #f3d37a;
@@ -90,14 +95,14 @@ section {
 
 section h2 {
     font-size: 2rem;
-    color: #d4a017;  /* ক্লাসিক গোল্ড */
+    color: #d4a017;          /* ক্লাসিক গোল্ড */
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 section p {
     font-size: 1.15rem;
-    color: #333333; /* খুব পরিষ্কার, শার্প রঙ */
+    color: #333333;          /* খুব পরিষ্কার, শার্প রঙ */
     margin-bottom: 15px;
 }
 
@@ -116,20 +121,24 @@ footer {
         flex-direction: column;
     }
     .title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     section {
         padding: 22px;
     }
 }
 
+/* ---------- Admin Image ---------- */
 .admin-img {
     width: 150px;
     height: 150px;
+    border-radius: 0;      /* এখন চারকোনা */
+    object-fit: cover;
 }
 
+/* ---------- Rules List ---------- */
 .rules {
-    list-style: none;   /* আগের বুলেটগুলো hide */
+    list-style: none;
     padding-left: 0;
 }
 
@@ -139,7 +148,7 @@ footer {
     color: #3e2d12;
     display: flex;
     align-items: center;
-    justify-content: center; /* সেন্টার অ্যালাইন */
+    justify-content: center;
     gap: 10px;
 }
 
@@ -151,7 +160,7 @@ footer {
     font-size: 1.2rem;
 }
 
-
+/* ---------- Member Grid ---------- */
 .member-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -185,3 +194,22 @@ footer {
     color: #6b5a3c;
 }
 
+.welcome-bar {
+    background: #e0fff3;       /* নরম পাতলা mint green ব্যাকগ্রাউন্ড */
+    color: #057a55;            /* গভীর beautiful green টেক্সট */
+    padding: 10px 0;
+    font-size: 1.15rem;        /* একটু বড় */
+    font-weight: 800;          /* মোটা লেখা */
+    border-bottom: 2px solid #0fa678;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.admin-email {
+    background: #fff;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0b7a5c;
+    border-bottom: 1px solid #c8eadd;
+}
