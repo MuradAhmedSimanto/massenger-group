@@ -213,3 +213,10 @@ footer {
     color: #0b7a5c;
     border-bottom: 1px solid #c8eadd;
 }
+.title {
+    font-size: 16px; /* হেডলাইন একেবারে ছোট */
+    font-weight: 300;
+}
+.sub {
+    font-size: 12px; /* নিচের সাবটাইটেলও ছোট */
+}
