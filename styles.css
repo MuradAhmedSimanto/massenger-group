@@ -1,4 +1,4 @@
-/* ---------- Global Settings ---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,15 +17,15 @@ body {
 /* ---------- Header (Slim + Sticky + Sharp Corners) ---------- */
 .header {
     background: #1abc9c;       /* teal / mint color */
-    padding: 6px 0;            /* extra slim header */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+    padding: 2px 0;            /* extra slim header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.18);
 
     border-radius: 0;          /* চারকোনা — কোনার কোনো গোল অংশ নেই */
     margin: 0;                 /* ফুল width বার */
 
     position: sticky;          /* স্ক্রল করলে টপে আটকে থাকবে */
     top: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .header-inner {
@@ -33,7 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .logo {
@@ -116,7 +116,7 @@ footer {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .header-inner {
         flex-direction: column;
     }
@@ -213,5 +213,110 @@ footer {
     color: #0b7a5c;
     border-bottom: 1px solid #c8eadd;
 }
+.title {
+    font-size: 16px; /* হেডলাইন একেবারে ছোট */
+    font-weight: 300;
+}
+.sub {
+    font-size: 12px; /* নিচের সাবটাইটেলও ছোট */
+}
+.msg-btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 11px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 999px;      /* একদম গোল পিল বাটন */
+    text-decoration: none;     /* নিচের দাগ বাদ */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.25s ease-in-out;
+}
+
+.msg-btn:hover {
+    background: linear-gradient(135deg, #16a085, #12856d);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+}
+
+
+.profile {
+    padding-bottom: 35px !important;   /* নিচের ফাঁকা জায়গা কমে যাবে */
+}
+
+
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #0fbf9f;          /* হালকা teal ব্যাকগ্রাউন্ড */
+    color: #ffffff;
+    padding: 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.ticker-inner {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker-move 30s linear infinite;
+}
+
+@keyframes ticker-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.meta {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #0f9d58;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight:300;
+    margin-top: 4px;
+}
+.dev-box {
+    display: inline-block;
+    background: #ffeb80;         /* সুন্দর হলুদ ব্যাকগ্রাউন্ড */
+    border: 2px solid #e0c200;   /* হলুদ বর্ডার */
+    padding: 1px 10px;           /* চিকন বক্স */
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.dev-box a {
+    text-decoration: none;
+    color: #000000;              /* ← ফন্ট কালার এখন BLACK */
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.dev-box:hover {
+    background: #ffe35c;         /* hover এ উজ্জ্বল হলুদ */
+    transform: translateY(-2px);
+    transition: 0.25s;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 1000;
+}
+.profile {
+    background: #f7fffb;
+    border: 1px solid #d3f6ea;
+}
+
+
+
+
 
 
