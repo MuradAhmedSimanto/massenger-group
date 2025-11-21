@@ -314,6 +314,7 @@ footer {
     background: #f7fffb;
     border: 1px solid #d3f6ea;
 }
+
 .notice-section {
     background: #fff7d9;
     border-left: 6px solid #f1c40f;
@@ -364,10 +365,131 @@ footer {
 .notice-list a:hover {
     text-decoration: underline;
 }
+/* Gallery section */
+.gallery-section {
+    margin-top: 40px;
+}
 
+/* Title */
+.gallery-section h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: #c69d00;
+    margin-bottom: 12px;
+}
 
+/* Hidden checkbox */
+.gallery-toggle {
+    display: none;
+}
 
+/* Button style (label) */
+.gallery-btn {
+    display: inline-block;
+    background: #1abc9c;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto 12px auto;
+    transition: 0.25s;
+}
 
+.gallery-btn:hover {
+    background: #169d82;
+}
 
+/* Gallery box default: hidden */
+.gallery-box {
+    display: none;
+    margin-top: 10px;
+}
 
+/* যখন checkbox টি checked হবে, তখন পাশের label এর পরের .gallery-box দেখা যাবে */
+.gallery-toggle:checked + .gallery-btn + .gallery-box {
+    display: block;
+}
 
+/* Grid layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 14px;
+}
+
+/* Photo style */
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: 0.25s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- NEW MEMBERS GALLERY (NO conflict, NO checkbox) ---------- */
+
+.member-gallery-new h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #c69d00;
+    margin-bottom: 18px;
+}
+
+/* Button */
+.gallery-open-btn {
+    background: #1abc9c;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: .25s;
+}
+
+.gallery-open-btn:hover {
+    background: #169d82;
+    transform: translateY(-2px);
+}
+
+/* Hidden by default */
+.member-gallery-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+    margin-top: 10px;
+}
+/* When open */
+.member-gallery-wrapper.show {
+    max-height: 900px; /* Large enough to show images */
+}
+
+/* Grid Layout */
+.member-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding-top: 10px;
+}
+
+/* Images */
+.member-gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: .25s;
+}
+
+.member-gallery-grid img:hover {
+    transform: scale(1.07);
+}
